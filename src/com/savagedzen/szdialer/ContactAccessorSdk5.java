@@ -94,7 +94,7 @@ final class ContactAccessorSdk5 extends ContactAccessor {
 	}
 
 	private final static String upName = "UPPER(" + Contacts.DISPLAY_NAME + ")";
-
+        /*
 	private final static String peopleSql = 
 		"(" + upName + " GLOB ? OR " + upName + " GLOB ?) AND " +
 		"has_phone_number = 1";*/
