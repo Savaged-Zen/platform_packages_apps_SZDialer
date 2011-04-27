@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<PreferenceCategory android:title="@string/category_dialer">	
+		<PreferenceScreen
+            android:key="dial_digits_color"
+            android:title="@string/title_change_digits_color">  
+                <ListPreference
+                    android:key="pressed_digit_color"
+                    android:title="@string/title_digits_color_pressed"
+                    android:dialogTitle="@string/title_choose_color"
+                    android:entries="@array/digits_colors"
+                    android:entryValues="@array/digits_colors_values"
+                    android:defaultValue="-16777216" />
+                <ListPreference
+                    android:key="focused_digit_color"
+                    android:title="@string/title_digits_color_focused"
+                    android:dialogTitle="@string/title_choose_color"
+                    android:entries="@array/digits_colors"
+                    android:entryValues="@array/digits_colors_values"
+                    android:defaultValue="-1" />
+                <ListPreference
+                    android:key="unselected_digit_color"
+                    android:title="@string/title_digits_color_unselected"
+                    android:dialogTitle="@string/title_choose_color"
+                    android:entries="@array/digits_colors"
+                    android:entryValues="@array/digits_colors_values"
+                    android:defaultValue="-1" />
+                <CheckBoxPreference
+                    android:key="dial_digit_use_custom_color"
+                    android:title="@string/title_use_custom_color"
+                    android:defaultValue="false"
+                    android:summary="@string/summaryon_custom_color"
+                    android:disableDependentsState="false" />
+                <EditTextPreference
+                    android:key="pressed_digit_color_custom"
+                    android:title="@string/title_digits_color_pressed"
+                    android:dependency="dial_digit_use_custom_color" />
+                <EditTextPreference
+                    android:key="focused_digit_color_custom"
+                    android:title="@string/title_digits_color_focused"
+                    android:dependency="dial_digit_use_custom_color" />
+                <EditTextPreference
+                    android:key="unselected_digit_color_custom"
+                    android:title="@string/title_digits_color_unselected"
+                    android:dependency="dial_digit_use_custom_color" />
+        </PreferenceScreen>
+        
+	<CheckBoxPreference
+		android:key="dial_enable_dial_tone"
+		android:title="@string/title_enable_dial_tone"
+		android:defaultValue="false" />
+	
+	<CheckBoxPreference
+		android:key="dial_enable_haptic"
+		android:title="@string/title_enable_haptic_feedback"
+		android:defaultValue="false" />
+		
+	<CheckBoxPreference
+		android:key="show_contact_pictures"
+		android:title="@string/title_show_contact_pictures"
+		android:defaultValue="true" />
+	
+	<CheckBoxPreference
+		android:key="auto_hide_dialpad_on_fling"
+		android:title="@string/title_hide_dialpad_on_fling"
+		android:defaultValue="true" />
+		
+		
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="@string/category_smart_dial">				
+	<CheckBoxPreference
+    	android:key="matched_italics"
+        android:title="@string/title_matched_italics"
+		android:defaultValue="false" />
+		
+	<CheckBoxPreference
+    	android:key="matched_bold"
+        android:title="@string/title_matched_bold"
+		android:defaultValue="true" />
+		
+	<CheckBoxPreference
+    	android:key="matched_colour"
+        android:title="@string/title_matched_colour"
+		android:defaultValue="true"
+		android:disableDependentsState="false" />
+		
+	<ListPreference
+		android:key="matched_colour_choice"
+ 		android:title="@string/title_choose_colour"
+		android:dialogTitle="@string/title_choose_colour"
+		android:entries="@array/digits_colors"
+		android:entryValues="@array/digits_colors_values"
+		android:defaultValue="-16777216"
+		android:dependency="matched_colour" />		
+		
+	<CheckBoxPreference
+    	android:key="matched_highlight"
+        android:title="@string/title_matched_highlight"
+		android:defaultValue="true"
+		android:disableDependentsState="false" />
+		
+	<ListPreference
+		android:key="matched_highlight_choice"
+ 		android:title="@string/title_choose_highlight"
+		android:dialogTitle="@string/title_choose_highlight"
+		android:entries="@array/digits_colors"
+		android:entryValues="@array/digits_colors_values"
+		android:defaultValue="-3355444"
+		android:dependency="matched_highlight" />
+		
+	<CheckBoxPreference
+    	android:key="match_num_sequence"
+        android:title="@string/title_match_num_seq"
+        android:summaryOn="@string/summaryon_match_num_seq"
+        android:summaryOff="@string/summaryoff_match_num_seq"
+		android:defaultValue="false" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/title_misc_category">
+        <PreferenceScreen
+            android:key="misc_about"
+            android:title="@string/title_about"> 
+          <Preference
+                android:key="about_name"
+                android:title="@string/title_about_name"
+                android:summary="@string/summary_about_name"
+                android:enabled="false" />
+          <Preference
+                android:key="about_author"
+                android:title="@string/title_about_author"
+                android:summary="@string/summary_about_author"
+                android:enabled="false" />
+            <Preference
+                android:key="about_credits"
+                android:title="@string/title_about_credits"
+                android:summary="@string/summary_about_credits"
+                android:enabled="false" />
+          <Preference
+                android:key="about_source"
+                android:title="@string/title_about_source"
+                android:summary="@string/summary_about_source"
+                android:enabled="false" />
+          <Preference
+                android:key="about_source"
+                android:title="@string/title_basic_usage"
+                android:summary="@string/summary_basic_usage"
+                android:enabled="false" />                
+        </PreferenceScreen>
+	</PreferenceCategory>
+		
+</PreferenceScreen>	

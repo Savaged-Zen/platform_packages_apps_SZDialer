@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voicemailAndDialAndDelete"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_weight="1"
+    android:orientation="horizontal">
+    
+    <!--  voicemailButton -->
+ 
+    <ImageButton android:id="@+id/dialButton" 
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_gravity="center_vertical"
+        android:state_enabled="false"
+        android:background="@drawable/btn_digits_left"
+        android:src="@drawable/ic_dial_action_call" />
+
+	<EditText android:id="@+id/digitsText"
+		android:layout_width="0dip"
+		android:layout_weight="1"
+		android:layout_height="50dip"
+		android:layout_gravity="center_vertical"
+		android:maxLines="1"
+		android:scrollHorizontally="true"
+ 		android:textSize="28sp"
+		android:freezesText="true"
+		android:background="@drawable/btn_digits"
+		android:focusableInTouchMode="true"
+		android:editable="true"
+		android:cursorVisible="false"
+	/>
+        
+    <ImageButton android:id="@+id/deleteButton"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_gravity="center_vertical"
+        android:state_enabled="false"
+        android:background="@drawable/btn_digits_right"
+        android:src="@drawable/ic_dial_action_delete" />
+</LinearLayout>
